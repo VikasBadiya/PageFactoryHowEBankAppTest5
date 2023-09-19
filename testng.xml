@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test name="PageFactoryHowEBankAppTest5" parallel="tests" thread-count="2">
+        <classes>
+            <class name="TestScenarios.HomePageTest">
+                <methods>
+                    <include name="TestHomePageUI" />
+                    <include name="TestLogoutFunctionality" />
+                </methods>
+            </class>
+            <class name="TestScenarios.LoginPageTest">
+                <methods>
+                    <include name="TestLoginPageUI" />
+                    <include name="TestSubmissionEmptyInput" />
+                    <include name="TestSubmissionWithUserId" />
+                    <include name="TestSubmissionEmptyPinField" />
+                    <include name="TestSubmissionInvalidPin" />
+                    <include name="TestSuccessfulLogin" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
